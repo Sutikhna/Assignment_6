@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="welcome.css">
+    <script>
+        function loadUser() {
+            const username = localStorage.getItem('username') || 'User';
+            document.getElementById('user-name').innerText = `Welcome, ${username}`;
+        }
+
+        function logout() {
+            localStorage.removeItem('username');
+            window.location.href = 'index.html';
+        }
+    </script>
+</head>
+<body onload="loadUser()">
+    <div class="welcome-container">
+        <h1 id="user-name">Welcome, User</h1>
+        <div class="button-group">
+            <a href="product.html" class="welcome-button">Go to Product Page</a>
+            <button onclick="logout()" class="welcome-button">Log Out</button>
+        </div>
+    </div>
+</body>
+</html>

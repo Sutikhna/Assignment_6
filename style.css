@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.product-card, .favorite-item {
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.product-card button, .favorite-item button {
+    margin-top: 8px;
+}
+
+.product-list, .favorites-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-card, .favorite-item {
+    width: calc(33% - 32px);
+    box-sizing: border-box;
+}
